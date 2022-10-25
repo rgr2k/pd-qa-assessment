@@ -29,8 +29,11 @@ On your terminal prompt, run one of the below commands
 2. Chrome `npm run cy:chrome`
 3. Firefox `npm run cy:firefox`
 4. Docker `npm run cy:docker`
+5. Run Smoke Tests (tagges as Smoke) `npm run cy:smoke`
+6. Run E2E Tests (tagges as E2e) `npm run cy:e2e`
+7. Run Tests that are untagged `npm run cy:e2e`
 
-## Known Bugs
+## Known/Found Bugs
 
 - The search bar returns the same locations regardless of the postal code or address inputted.
 - The iframe prompt doesn't display consistently.

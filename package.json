@@ -10,10 +10,12 @@
     "cy:head": "cypress run --headed",
     "cy:chrome": "cypress run --browser chrome",
     "cy:firefox": "cypress run --browser firefox",
-    "cy:smoke": "npx cypress run --env grep='Smoke'",
+    "cy:smoke": "npx cypress run --env grepTags=smoke",
+    "cy:e2e": "npx cypress run --env grepTags=e2e",
+    "cy:untagged": "npx cypress run --env grepUntagged=true",
     "cy:docker": "docker build -t cypress-test-image:1.0.0 ."
   },
   "dependencies": {
-    "cypress-grep": "^1.0.0"
+    "cypress-grep": "^2.13.0"
   }
 }

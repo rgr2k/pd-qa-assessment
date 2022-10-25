@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 import Data from '../fixtures/data.json';
 import Obj from '../objects/object.js';
+require('cypress-grep')()
 
 const obj = new Obj();
 
@@ -12,24 +13,24 @@ describe('Contact Bubble Validation', () => {
       cy.contains(Data.literals.MAIN_QUOTE);
     })
 
-    it('Assert url - Smoke', () => {
+    it('Assert url', { tags: 'smoke' }, () => {
 
         cy.url().should('eq', Cypress.config().baseUrl);
     });
     
-    it('Assert that the Contact Bubble exists is visible and clickable - Smoke', () => {
+    it('Assert that the Contact Bubble exists is visible and clickable', { tags: 'smoke' }, () => {
 
         cy.ck_PodiumBubble();
     });
 
-    it('Assert that the Bubble is closed', () => {
+    it('Assert that the Bubble is closed', { tags: 'e2e' }, () => {
 
         cy.get(Data.elements.podiumBubble).should('exist');
             obj.closeTheBubble();
         cy .get(Data.elements.podiumWebWidget).should('not.exist');
     });
 
-    it('Assert the toggle for the modal open and close', () => {
+    it('Assert the toggle for the modal open and close', { tags: 'e2e' }, () => {
 
         obj.toggle();
         cy.getIframeBody(Data.elements.podiumBubble).find(Data.elements.button).invoke('attr', 'aria-label').should('include', 'close');
@@ -37,7 +38,7 @@ describe('Contact Bubble Validation', () => {
         cy.getIframeBody(Data.elements.podiumBubble).find(Data.elements.button).invoke('attr', 'aria-label').should('include', 'open');
       });
     
-      it('Assert toggle for the modal open and click outside of the modal to close', () => {
+      it('Assert toggle for the modal open and click outside of the modal to close', { tags: 'e2e' },() => {
         
         obj.toggle();
         cy.get(Data.elements.podiumModal).should('exist');
@@ -45,7 +46,7 @@ describe('Contact Bubble Validation', () => {
         cy.get(Data.elements.podiumModal).should('not.exist');
       });
 
-      it('Assert that it completes the core user flow of the website widget', () => {
+      it('Assert that it completes the core user flow of the website widget', { tags: 'e2e' }, () => {
         // Open iframe
         obj.toggle();
         cy.getIframeBody(Data.elements.podiumModal).find(Data.elements.locationSelector).should('be.visible');
@@ -63,7 +64,7 @@ describe('Contact Bubble Validation', () => {
         });
       });
     
-      it('Assert that it navigates to the Podium Acceptable Use Policy', () => {
+      it('Assert that it navigates to the Podium Acceptable Use Policy', { tags: 'e2e' },() => {
 
         obj.toggle();
         cy.getIframeBody(Data.elements.podiumModal).find('.LocationSelector__PodiumPower').within(() => {
@@ -93,7 +94,7 @@ describe('Contact Bubble Validation', () => {
         });
       });
     
-      it('Assert that it returns an error when Mobile Phone* is too short', () => {
+      it('Assert that it returns an error when Mobile Phone* is too short', { tags: 'e2e' }, () => {
 
         obj.toggle();
         obj.clickOnOrem();
@@ -103,7 +104,7 @@ describe('Contact Bubble Validation', () => {
         });
       });
     
-      it('Assert that it returns an error when Mobile Phone* is invalid', () => {
+      it('Assert that it returns an error when Mobile Phone* is invalid', { tags: 'smoke' },() => {
 
         obj.toggle();
         obj.clickOnOrem();
