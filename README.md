@@ -38,6 +38,8 @@ On your terminal prompt, run one of the below commands
 - The iframe Send button isn't actually disabled.
 - The API returns more than 3 Locations but the UI displays only 3
 
-## Note
+## Docker Note
 - When trying to run with docker image, sometimes it's failing due to a docker/cypress issue. 
-It would take more time to solve.
+It would take more time to solve. 
+
+- I'm using macbook pro m1, and this docker image does not work properly on it using the cypress version I'm using, try on Intel based machine.
