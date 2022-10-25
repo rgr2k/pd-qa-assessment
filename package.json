@@ -11,7 +11,7 @@
     "cy:chrome": "cypress run --browser chrome",
     "cy:firefox": "cypress run --browser firefox",
     "cy:smoke": "npx cypress run --env grep='Smoke'",
-    "cy:docker": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:3.2.0"
+    "cy:docker": "docker run -it -v $PWD:/e2e -w /e2e -e CYPRESS_VIDEO=false --entrypoint=cypress cypress/included:3.2.0 run"
   },
   "dependencies": {
     "cypress-grep": "^1.0.0"

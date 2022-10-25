@@ -12,9 +12,9 @@ using [Cypress](https://www.cypress.io/) and JavaScript.
 
 ### Run Headed
 
-On your terminal prompt, run one of the below commands
+On your terminal prompt, run one of the below commands:
 
-1. Run `npm run cypress:open`
+1. Run `npx cypress open`
 2. Click `section-1.spec.js`
 
 or
@@ -37,3 +37,7 @@ On your terminal prompt, run one of the below commands
 - Remove the space in `#Mobile Phone`.
 - The iframe Send button isn't actually disabled.
 - The API returns more than 3 Locations but the UI displays only 3
+
+## Note
+- When trying to run with docker image, sometimes it's failing due to a docker/cypress issue. 
+It would take more time to solve.
