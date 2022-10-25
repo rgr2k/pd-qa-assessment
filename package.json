@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-real-events": "^1.7.1"
+  },
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:head": "cypress run --headed",
+    "cy:chrome": "cypress run --browser chrome",
+    "cy:firefox": "cypress run --browser firefox",
+    "cy:smoke": "npx cypress run --env grep='Smoke'",
+    "cy:docker": "docker run -it -v $PWD:/e2e -w /e2e cypress/included:3.2.0"
+  },
+  "dependencies": {
+    "cypress-grep": "^1.0.0"
+  }
+}

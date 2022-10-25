@@ -1,0 +1,39 @@
+{
+  "literals": {
+    "MAIN_QUOTE": "All we have to decide is what to do with the time that is given us.",
+    "PODIUM_POLICY": "https://www.podium.com/acceptable-use-policy/",
+    "MESSAGE_REQUIRED": "Message is required",
+    "MOBILE_REQUIRED": "Mobile phone is required",
+    "NAME_REQUIRED": "Name is required",
+    "MOBILE_SHORT_VAL": "Mobile phone is too short",
+    "PHONE_NUMBER_REQ": "Please enter a phone number that can receive texts.",
+    "TRY_AGAIN": "Try Again",
+    "SENDING": "Sending...",
+    "TEST_NAME": "Rodrigo Guimaraes",
+    "TEST_MOBILE": "5531992949966",
+    "TEST_MOBILE_ZERO": "0000000000"
+  },
+
+  "elements": {
+   "contactBubble": "#podium-bubble",
+   "podiumModal" : "#podium-modal",
+   "button": "button",
+   "locationsList": ".LocationsList",
+   "locationSelector": ".LocationSelector",
+   "podiumBubble": "#podium-bubble",
+   "podiumPrompt": "#podium-prompt",
+   "message":"#Message",
+   "name": "#Name",
+   "inputTel":"input[type=tel]",
+   "smsMain": ".SendSmsPage__MainContent",
+   "smsText": ".SendSmsPage__TextInvitation",
+   "podiumWebWidget": "podium-website-widget-button",
+   "smsFormContent":".SendSmsPage__FormContent",
+   "submitMessage":".SubmittedMessage--visible",
+   "submitMessageStatus":".SubmittedMessage__SendStatus",
+   "confirmMessage":".ConfirmationMessage",
+   "textInputError": ".TextInput__TextInputError",
+   "legalError": ".Legal--error",
+   "buttonSubmit": "button[type=submit]"
+  }
+} 
